@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Resumo GDEA - Grupo de Estudos Avançados</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="textos.css" />
+  </head>
+  <body>
+    <button class="voltar-bt" onclick="history.back()">← Voltar</button>
+
+    <main class="container">
+      <h1>Textos escritos e publicados</h1>
+
+      <!-- NOVA SEÇÃO: PDF incorporado -->
+      <section class="pdf-section">
+        <h2>O mito da democracia racial</h2>
+
+        <!-- Visualização do PDF -->
+        <iframe
+          src="pdfs/texto-antropologia.pdf.pdf"
+          width="100%"
+          height="800px"
+          style="border: none"
+        ></iframe>
+
+        <!-- Botão para download -->
+        <div class="botoes">
+          <p style="margin-top: 10px">
+            <a href="pdfs/texto-antropologia.pdf.pdf" download>
+              <i class="fas fa-file-pdf"></i> Baixar PDF
+            </a>
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- jsPDF CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <script>
+      // Toggle Ler mais / Ler menos
+      const lerMaisBtn = document.getElementById("ler-mais-btn");
+      const textoCompleto = document.getElementById("texto-completo");
+
+      lerMaisBtn.addEventListener("click", () => {
+        if (textoCompleto.style.display === "none") {
+          textoCompleto.style.display = "block";
+          lerMaisBtn.textContent = "Ler menos";
+        } else {
+          textoCompleto.style.display = "none";
+          lerMaisBtn.textContent = "Ler mais";
+        }
+      });
+
+      // Gerar PDF formatado ABNT básico
+      const gerarPdfBtn = document.getElementById("gerar-pdf-btn");
+      gerarPdfBtn.addEventListener("click", () => {
+        const { jsPDF } = window.jspdf;
+        const doc = new jsPDF();
+
+        const marginLeft = 20;
+        const marginRight = 20;
+        const marginTop = 20;
+        const pageWidth = doc.internal.pageSize.getWidth();
+        const usableWidth = pageWidth - marginLeft - marginRight;
+
+        doc.setFont("times", "normal");
+        doc.setFontSize(12);
+        doc.setTextColor(0, 0, 0);
+
+        const titulo = "GDEA - Grupo de Estudos Avançados";
+        const autor = "Eylis";
+        const dataPublicacao = "18 de Maio de 2025";
+        const linkSite = "https://seusite.com/artigo-gdea";
+
+        let y = marginTop;
+        doc.text(titulo, marginLeft, y);
+        y += 8;
+        doc.text("Autor: " + autor, marginLeft, y);
+        y += 8;
+        doc.text("Data de publicação: " + dataPublicacao, marginLeft, y);
+        y += 8;
+        doc.setTextColor(0, 0, 255);
+        doc.textWithLink(linkSite, marginLeft, y, { url: linkSite });
+        y += 12;
+        doc.setTextColor(0, 0, 0);
+
+        const resumo = document
+          .getElementById("texto-resumo")
+          .textContent.trim();
+        const completo = document
+          .getElementById("texto-completo")
+          .textContent.trim();
+        const textoPdf = resumo + "\n\n" + completo;
+
+        const linhas = doc.splitTextToSize(textoPdf, usableWidth);
+        linhas.forEach((linha) => {
+          if (y > doc.internal.pageSize.getHeight() - marginTop) {
+            doc.addPage();
+            y = marginTop;
+          }
+          doc.text(linha, marginLeft, y);
+          y += 8;
+        });
+
+        doc.save("GDEA_Resumo.pdf");
+      });
+    </script>
+  </body>
+</html>

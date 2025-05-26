@@ -1,0 +1,164 @@
+body {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background-color: var(--maisEscuro);
+  margin: 0;
+  padding: 20px;
+  color: #1a1a1a;
+}
+
+:root {
+  --primaria: #4f46e5;
+  --secundaria: #7c3aed;
+  --escuro: #0f172a;
+  --maisEscuro: #0a0f1c;
+  --claro: #e2e8f0;
+  --vidro: rgba(255, 255, 255, 0.1);
+  --azul: #120a8f;
+  --azul-claro: #3498db;
+  --background-color: #34495e;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 30px;
+  background: var(--escuro);
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.titulo-destaque {
+  text-align: center;
+  color: #1a73e8;
+  font-size: 2rem;
+}
+
+.paragrafo-projetos {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.tab {
+  padding: 10px 20px;
+  border: none;
+  background-color: #e0e0e0;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.tab:hover,
+.tab.active {
+  background-color: #1a73e8;
+  color: white;
+}
+
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.galeria-grid img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.galeria-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Controle de visibilidade das categorias */
+.categoria {
+  display: none;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.categoria.ativa {
+  display: grid;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.85);
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90vh;
+  border-radius: 12px;
+  box-shadow: 0 0 30px #fff;
+  animation: fadeIn 0.5s ease-in-out;
+}
+.lightbox-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.voltar-bt {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  background-color: #1a73e8;
+  color: white;
+  z-index: 1000;
+}
+
+@media (max-width: 768px) {
+  main.container {
+    padding: 20px;
+    margin: 20px 10px;
+  }
+
+  iframe {
+    height: 400px;
+  }
+
+  .botoes button,
+  .pdf-section a {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  h1,
+  h2 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+}

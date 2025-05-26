@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Criações Gráficas</title>
+    <link rel="stylesheet" href="design.css" />
+    <script defer src="design.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- Botão Voltar -->
+    <button class="voltar-bt" href="404.html" onclick="history.back()">
+      ← Voltar
+    </button>
+
+    <section class="container">
+      <h2 class="titulo-destaque">Criações Gráficas</h2>
+      <p class="paragrafo-projetos">
+        Explore os projetos separados por temas. Clique em uma categoria para
+        ver os trabalhos relacionados.
+      </p>
+
+      <!-- Abas -->
+      <div class="tabs">
+        <button class="tab active" onclick="mostrarCategoria('paletras')">
+          Palestras UFF
+        </button>
+        <button class="tab" onclick="mostrarCategoria('cartazes')">
+          GP de Estudos Avançado
+        </button>
+      </div>
+
+      <!-- Galerias -->
+      <div id="galeria-paletras" class="galeria-grid categoria ativa">
+        <img src="./necs/foto.png" alt="Paletras 1" />
+        <img src="./necs/foto1.png" alt="Paletras 2" />
+        <img src="./necs/foto2.png" alt="Paletras 3" />
+        <img src="./necs/foto3.png" alt="Paletras 4" />
+        <img src="./necs/foto4.png" alt="Paletras 5" />
+        <img src="./necs/foto5.png" alt="Paletras 6" />
+        <img src="./necs/foto6.png" alt="Paletras 7" />
+        <img src="./necs/foto7.png" alt="Paletras 8" />
+      </div>
+
+      <div id="galeria-cartazes" class="galeria-grid categoria">
+        <img src="necs/gpd.webp" alt="Cartaz 1" />
+        <img src="necs/gpd1.webp" alt="Cartaz 2" />
+        <img src="necs/gpd3.webp" alt="Cartaz 3" />
+      </div>
+      <!--<div id="galeria-logotipos" class="galeria-grid categoria">
+        <img src="imagens/logo1.jpg" alt="Logo 1" />
+        <img src="imagens/logo2.jpg" alt="Logo 2" />
+        <img src="imagens/logo3.jpg" alt="Logo 3" />
+      </div>
+    --></section>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" onclick="fecharLightbox()">
+      <div class="lightbox-content" onclick="event.stopPropagation()">
+        <img id="lightbox-img" src="" alt="Imagem ampliada" />
+        <a id="lightbox-link" href="#" target="_blank" class="insta-button">
+          Ver no Instagram <i class="fa-brands fa-instagram"></i>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>

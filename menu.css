@@ -1,0 +1,178 @@
+.navegacao {
+  /*position: fixed; ...ver se vale a pena ou não*/
+  top: 0;
+  background-color: rgba(15, 23, 42, 0.8);
+  width: 100%;
+  z-index: 100;
+  padding: 1.5rem;
+}
+
+.menu {
+  display: flex;
+  justify-content: center; /*center - centraliza, width esquerda, eight direita, o menu*/
+  list-style: none;
+  gap: 3rem;
+}
+.menu-link {
+  text-decoration: none;
+  color: var(--claro);
+  font-weight: 500;
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+.menu-link::after {
+  content: "";
+  height: 2px;
+  width: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(90deg, var(--primaria), var(--secundaria));
+  transition: width 0.5s ease;
+}
+
+.menu-link:hover::after {
+  width: 100%;
+}
+
+/*.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8));
+  opacity: 0.5;
+  z-index: 1;
+  pointer-events: none; /* IMPORTANTE: permite clique nos elementos abaixo */
+
+nav.menu-lateral {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 300px;
+  height: 100%;
+  background-color: var(--vidro);
+  box-shadow: -3px 0 0 var(--vidro);
+  transition: right 0.3s ease;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+
+nav.menu-lateral.expandir {
+  right: 0;
+}
+
+nav.menu-lateral ul {
+  padding-top: 40px; /* ou 30px, vai testando o que fica mais bonito */
+}
+
+.menu-lateral {
+  display: flex;
+  flex-direction: column;
+}
+
+.conteudo-menu {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.redes-sociais {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+.redes-sociais a {
+  text-decoration: none;
+  color: #000;
+  text-align: center;
+  font-size: 14px;
+}
+.redes-sociais i {
+  font-size: 28px;
+  display: block;
+  margin-bottom: 5px;
+}
+.redes-sociais a i {
+  font-size: 18px;
+  color: white;
+  transition: 0.3s;
+}
+
+.redes-sociais a:hover i {
+  color: #1c0075;
+}
+
+/* Botão de expandir — fora do menu */
+.btn-expandir {
+  position: absolute;
+  top: 60px;
+  left: -50px; /* fora da aba, mas grudado */
+  width: 40px;
+  height: 40px;
+  background-color: var(--primaria);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1001;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  transition: left 0.3s ease;
+}
+
+.btn-expandir i {
+  color: white;
+  font-size: 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+ul li.item-menu {
+  transition: 0.2s;
+  width: 100%;
+}
+
+ul li.ativo {
+  background-color: #1c0075;
+}
+
+ul li.item-menu:hover {
+  background: #1c0075;
+}
+
+ul li.item-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+ul li.item-menu a .txt-link {
+  margin-left: 20px;
+  opacity: 0;
+  transition: 0.5s;
+  white-space: nowrap;
+}
+
+nav.menu-lateral.expandir .txt-link {
+  opacity: 1;
+}
+
+ul li.item-menu a .icon > i {
+  font-size: 25px;
+}

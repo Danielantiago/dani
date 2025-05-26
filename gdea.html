@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GDEA - Detalhes do Projeto</title>
+    <link rel="stylesheet" href="gdea.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Botão voltar fixo -->
+    <button class="voltar-bt" onclick="history.back()">← Voltar</button>
+
+    <main class="container">
+      <h1>GDEA - Grupo de Estudos Avançados</h1>
+
+      <div class="descricao">
+        <p>
+          O GDEA é uma comunidade educacional gratuita e colaborativa no
+          Discord, criada para facilitar o aprendizado de forma acessível,
+          divertida e organizada.
+        </p>
+        <p>
+          Organizamos conteúdos por áreas, promovemos debates, plantões de
+          dúvidas e incentivamos a troca de conhecimento entre estudantes de
+          diferentes níveis.
+        </p>
+      </div>
+
+      <h2 class="subtitulo">Galeria de Imagens</h2>
+      <div class="galeria">
+        <img src="necs/discord.jpg" alt="Imagem 1" class="img-galeria" />
+        <img src="necs/discord1.jpg" alt="Imagem 2" class="img-galeria" />
+        <img src="necs/discord2.jpg" alt="Imagem 3" class="img-galeria" />
+        <img src="necs/discord3.jpg" alt="Imagem 4" class="img-galeria" />
+        <img src="necs/discord4.jpg" alt="Imagem 5" class="img-galeria" />
+        <img src="necs/discord5.jpg" alt="Imagem 5" class="img-galeria" />
+        <img src="necs/discord6.jpg" alt="Imagem 5" class="img-galeria" />
+        <img src="necs/discord7.jpg" alt="Imagem 5" class="img-galeria" />
+        <img src="necs/discord8.jpg" alt="Imagem 5" class="img-galeria" />
+        <img src="necs/discord9.jpg" alt="Imagem 5" class="img-galeria" />
+        <img src="necs/discord10.jpg" alt="Imagem 5" class="img-galeria" />
+        <img src="necs/discord11.jpg" alt="Imagem 5" class="img-galeria" />
+        <img src="necs/discord12.jpg" alt="Imagem 5" class="img-galeria" />
+        <img src="necs/discord13.jpg" alt="Imagem 5" class="img-galeria" />
+        <img src="necs/discord14.jpg" alt="Imagem 5" class="img-galeria" />
+      </div>
+      <div class="links-uteis">
+        <h2>Links Úteis</h2>
+        <a href="https://discord.gg/HhmkKU36j9" target="_blank">
+          <i class="fab fa-discord"></i> Discord
+        </a>
+        <a href="mailto:grupodeestudogdea@gmail.com" target="_blank">
+          <i class="fas fa-envelope"></i> E-mail
+        </a>
+        <a
+          href="https://chat.whatsapp.com/DfMXXrOg0Ug0mkZuzCEVJo
+"
+          target="_blank"
+        >
+          <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+        <a
+          href="https://drive.google.com/drive/folders/1-2_96FKoK5YkiQiinWtxvmG3V_Fgue6W"
+          target="_blank"
+        >
+          <i class="fas fa-folder-open"></i> Google Drive
+        </a>
+      </div>
+    </main>
+
+    <!-- Lightbox para ampliar imagem -->
+    <div class="lightbox" id="lightbox">
+      <img src="" alt="Imagem ampliada" id="lightbox-img" />
+    </div>
+
+    <script>
+      const imagens = document.querySelectorAll(".img-galeria");
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImg = document.getElementById("lightbox-img");
+
+      imagens.forEach((img) => {
+        img.addEventListener("click", () => {
+          lightbox.style.display = "flex";
+          lightboxImg.src = img.src;
+          lightboxImg.alt = img.alt;
+        });
+      });
+
+      lightbox.addEventListener("click", () => {
+        lightbox.style.display = "none";
+      });
+    </script>
+  </body>
+</html>

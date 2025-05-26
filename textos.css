@@ -1,0 +1,120 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #06002b;
+  margin: 0;
+  padding: 20px;
+  color: #1a1a1a;
+}
+
+:root {
+  --primaria: #4f46e5;
+  --secundaria: #7c3aed;
+  --escuro: #0f172a;
+  --maisEscuro: #0a0f1c;
+  --claro: #e2e8f0;
+  --vidro: rgba(255, 255, 255, 0.1);
+  --azul: #120a8f;
+  --azul-claro: #3498db;
+  --background-color: #34495e;
+}
+
+.voltar-bt {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  background-color: #1a73e8;
+  color: white;
+  z-index: 1000;
+}
+
+main.container {
+  max-width: 700px;
+  margin: 60px auto 40px auto;
+  background: var(--primaria);
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 0 10px rgb(0 0 0 / 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.texto-limitado {
+  max-height: 120px;
+  overflow: hidden;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+#texto-completo {
+  line-height: 1.5;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+.botoes {
+  text-align: center;
+}
+
+.botoes button {
+  padding: 12px 25px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#ler-mais-btn {
+  background-color: #1a73e8;
+  color: white;
+}
+
+#ler-mais-btn:hover {
+  background-color: #155ab6;
+}
+
+#gerar-pdf-btn {
+  background-color: #1c0075;
+  color: white;
+}
+
+#gerar-pdf-btn:hover {
+  background-color: #1c0075;
+}
+
+/* NOVO: Estilo da seção PDF */
+.pdf-section {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+}
+
+.pdf-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.pdf-section a {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #1c0075;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.pdf-section a:hover {
+  background-color: #1c0075;
+}

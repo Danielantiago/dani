@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daniel Santiago</title>
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="contato.css" />
+    <link rel="stylesheet" href="menu.css" />
+    <link rel="stylesheet" href="rodape.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- Fundo de partículas -->
+    <div class="particulas"></div>
+
+    <!-- Navegação principal -->
+    <nav class="navegacao">
+      <h2>Portfo<span>lio</span></h2>
+      <ul class="menu">
+        <li><a href="#inicio" class="menu-link">Início</a></li>
+        <li><a href="#sobre" class="menu-link">Sobre</a></li>
+        <li><a href="#projetos" class="menu-link">Projetos</a></li>
+        <li><a href="#servicos" class="menu-link">Serviços</a></li>
+        <li><a href="#contatos" class="menu-link">Contato</a></li>
+      </ul>
+    </nav>
+
+    <!-- Menu lateral -->
+    <nav class="menu-lateral" id="menu">
+      <div class="btn-expandir" id="btn-exp">
+        <i class="bi bi-list"></i>
+      </div>
+
+      <div class="conteudo-menu">
+        <ul>
+          <li class="item-menu ativo">
+            <a href="#inicio"
+              ><span class="icon"><i class="bi bi-house"></i></span
+              ><span class="txt-link">Início</span></a
+            >
+          </li>
+          <li class="item-menu">
+            <a href="#sobre"
+              ><span class="icon"><i class="bi bi-info-circle"></i></span
+              ><span class="txt-link">Sobre</span></a
+            >
+          </li>
+          <li class="item-menu">
+            <a href="#projetos"
+              ><span class="icon"><i class="bi bi-kanban"></i></span
+              ><span class="txt-link">Projetos</span></a
+            >
+          </li>
+          <li class="item-menu">
+            <a href="#servicos"
+              ><span class="icon"><i class="bi bi-tools"></i></span
+              ><span class="txt-link">Serviços</span></a
+            >
+          </li>
+          <li class="item-menu">
+            <a href="#contatos"
+              ><span class="icon"><i class="bi bi-envelope"></i></span
+              ><span class="txt-link">Contato</span></a
+            >
+          </li>
+        </ul>
+
+        <div class="redes-sociais">
+          <a
+            href="https://www.linkedin.com/in/daniel-santiago-39096821a"
+            target="_blank"
+          >
+            <i class="bi bi-linkedin"></i>
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://wa.me/5521998425824" target="_blank">
+            <i class="bi bi-whatsapp"></i>
+            <span>(21)99842-5821</span>
+          </a>
+          <a href="mailto:danielsantiagobern@gmail.com">
+            <i class="bi bi-envelope"></i>
+            <span>danielsantiagobern@gmail.com</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Cabeçalho -->
+    <main id="inicio" class="cabecalho">
+      <h1 class="h1">Daniel Santiago</h1>
+      <p class="cabecalho-sub-titulo">
+        Olá, seja bem vindo ao meu portfolio online.
+      </p>
+    </main>
+
+    <!-- Sobre -->
+    <section id="sobre" class="projeto-sobre">
+      <h2 class="sobre-titulo">Sobre Mim</h2>
+      <div class="sobre-caixa">
+        <p class="sobre-paragrafo">
+          Olá! Sou estudante de Ciências Sociais na Universidade Federal
+          Fluminense e também atuo como web designer. Tenho paixão por educação,
+          projetos colaborativos e tecnologia. Acredito que a organização,
+          aliada à coletividade, tem o poder de transformar o aprendizado e
+          gerar impacto real. Busco unir pensamento crítico e criatividade
+          visual para construir soluções que conectem pessoas, ideias e
+          conhecimento.
+        </p>
+      </div>
+    </section>
+
+    <!-- Projetos -->
+    <section id="projetos" class="projetos-section">
+      <h2 class="projetos-titulo">Meus Projetos</h2>
+      <div class="projetos-caixa">
+        <!-- Projeto GDEA -->
+        <div class="projetos-card">
+          <img
+            src="pp-estudos.png"
+            alt="Imagem do Projeto GDEA"
+            class="projetos-imagem"
+          />
+          <div class="caixa-texto-projetos">
+            <h3 class="info-projetos">GDEA - Grupo de Estudos Avançados</h3>
+            <p class="paragrafo-projetos">
+              O GDEA é uma iniciativa de educação colaborativa criada por mim
+              com o objetivo de democratizar o acesso ao conhecimento. Fundado
+              em 2022 por Daniel Santiago, o projeto funciona por meio de um
+              servidor no Discord que reúne mais de 600 participantes
+              interessados em aprender e crescer juntos. Com canais organizados
+              por áreas do saber, o GDEA oferece conteúdos gratuitos, espaços
+              para dúvidas, grupos de estudos e troca ativa de experiências. Sua
+              proposta alia leveza e acolhimento à seriedade do aprendizado,
+              tornando-se referência para quem busca um ambiente alternativo,
+              inclusivo e dinâmico de estudos online.
+            </p>
+            <div class="botao-centro">
+              <a href="./gdea.html" class="btm">Saiba mais</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projeto Exemplo 1 -->
+        <div class="projetos-card">
+          <img
+            src="text.png"
+            alt="Imagem do projeto exemplo"
+            class="projetos-imagem"
+          />
+          <div class="caixa-texto-projetos">
+            <h3 class="info-projetos">Textos</h3>
+            <p class="paragrafo-projetos">
+              Esta seção reúne minhas produções escritas, que transitam entre o
+              criativo, o acadêmico e o profissional. São textos desenvolvidos
+              com atenção à linguagem, argumentação e propósito, sempre buscando
+              clareza, sensibilidade e consistência. Aqui você encontrará
+              reflexões, ensaios, artigos e publicações que expressam minha
+              visão de mundo, meu interesse por temas sociais e minha habilidade
+              em comunicar ideias de forma estruturada. Cada conteúdo representa
+              um recorte autêntico do meu estilo e compromisso com a escrita de
+              qualidade.
+            </p>
+            <div class="botao-centro">
+              <a href="textos.html" class="btm">Saiba mais</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projeto Exemplo 2 -->
+        <div class="projetos-card">
+          <img
+            src="desg.png"
+            alt="Imagem do projeto exemplo"
+            class="projetos-imagem"
+          />
+          <div class="caixa-texto-projetos">
+            <h3 class="info-projetos">Criações Gráficas</h3>
+            <p class="paragrafo-projetos">
+              Esta parte do portfólio apresenta uma seleção dos meus trabalhos
+              em design gráfico, incluindo criações conceituais, peças para
+              redes sociais, materiais institucionais e projetos acadêmicos.
+              Cada trabalho reflete meu olhar visual, domínio das ferramentas de
+              design e preocupação com a comunicação clara e impactante. A
+              variedade de estilos e formatos presentes aqui revela minha
+              versatilidade, criatividade e evolução estética, sempre buscando
+              alinhar identidade visual com propósito e funcionalidade.
+            </p>
+            <div class="botao-centro">
+              <a href="./design.html" class="btm">Saiba mais</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Serviços -->
+    <section id="servicos" class="projeto-sobre">
+      <div class="container-servicos">
+        <div class="title">
+          <h2>Meus Serviços</h2>
+        </div>
+        <div class="caixa-servicos">
+          <div class="card-servico">
+            <i class="fa fa-code"></i>
+            <h5>Desenvolvimento Web</h5>
+            <p>
+              Criação de sites modernos, responsivos e com foco na experiência
+              do usuário.
+            </p>
+          </div>
+
+          <div class="card-servico">
+            <i class="fa fa-pencil-alt"></i>
+            <h5>Design Gráfico</h5>
+            <p>
+              Criação de identidades visuais, posts para redes sociais e
+              materiais gráficos.
+            </p>
+          </div>
+
+          <div class="card-servico">
+            <i class="fa fa-users"></i>
+            <h5>Gestão de Comunidade</h5>
+            <p>
+              Experiência na organização de comunidades online com foco em
+              educação e colaboração.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contatos" class="contatos">
+      <h2 class="contatos-titulo">Entre em Contato</h2>
+
+      <form
+        class="formulario-contato"
+        id="formulario"
+        onsubmit="enviarWhats(event)"
+      >
+        <div class="grupo-form">
+          <input
+            type="text"
+            placeholder="Seu Nome"
+            class="campo-form"
+            id="nome"
+            required
+          />
+        </div>
+
+        <div class="grupo-form">
+          <input
+            type="text"
+            placeholder="Motivo do Contato"
+            class="campo-form"
+            id="motivo"
+            required
+            readonly
+          />
+          <span class="icone-seta">▼</span>
+          <!-- Ícone aqui -->
+
+          <div class="lista-opcoes" id="lista-opcoes">
+            <div class="opcao vazio" data-motivo=""> </div>
+            <!-- aba vazia com espaço não quebrável -->
+            <div class="opcao" data-motivo="Quero um site">Quero um site</div>
+            <div class="opcao" data-motivo="Sobre o discord">
+              Sobre o discord
+            </div>
+            <div class="opcao" data-motivo="Sobre seus textos">
+              Sobre seus textos
+            </div>
+            <div class="opcao" data-motivo="Um serviço seu">Um serviço seu</div>
+            <div class="opcao" data-motivo="Outros">Outros</div>
+          </div>
+        </div>
+
+        <div class="grupo-form">
+          <textarea
+            class="campo-form"
+            placeholder="Digite sua Mensagem"
+            id="mensagem"
+            rows="5"
+            required
+          ></textarea>
+        </div>
+
+        <button type="submit" class="botao-form">Enviar WhatsApp</button>
+
+        <script src="script.js"></script>
+        <script src="contato.js"></script>
+        <script src="design.js"></script>
+      </form>
+    </section>
+  </body>
+</html>
